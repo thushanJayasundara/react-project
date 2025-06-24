@@ -1,10 +1,22 @@
 import './App.css'
 
-let language = "JavaScript";
-let moon = "🌙";
+function Header(){
+  return (
+    <header>
+      <h1>Eve's kitchen</h1>
+    </header>
+  );
+}
 
 function App() {
-  return <h1>Hello {language} {language.toUpperCase()} {moon} !</h1>; 
+  return( 
+      <div>
+          <Header/>
+          <main>
+            <h2> we serve the most delicious food</h2>
+          </main>
+      </div>
+  ); 
 }
 
 export default App
