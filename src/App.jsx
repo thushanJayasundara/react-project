@@ -1,11 +1,10 @@
 import './App.css'
 
-function Header(props){
-  console.log(props)
+function Header({name, year}){
   return (
     <header>
-      <h1>{props.name} kitchen</h1>
-      <h2>Since {props.year}</h2>
+      <h1>{name} kitchen</h1>
+      <h2>Since {year}</h2>
     </header>
   );
 }
