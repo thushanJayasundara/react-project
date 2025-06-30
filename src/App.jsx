@@ -9,12 +9,18 @@ function Header({name, year}){
   );
 }
 
-function Main(){
+const item = [
+  "Maconi and Cheese",
+  "Salmon with Potatoes",
+  "Tofu with Vegetables"
+]
+
+function Main({dishes}){
   return (
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {dishes.map((dish) => (
+        <li>{dish}</li>
+      ))}
     </ul>
   )
 }
@@ -24,7 +30,7 @@ function App() {
   return( 
       <div>
           <Header name = "Alex" year = {new Date().getFullYear()}/>
-          <Main />
+          <Main dishes = {item}/>
       </div>
   ); 
 }
