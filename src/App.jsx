@@ -18,9 +18,10 @@ const item = [
 function Main({dishes}){
   return (
     <ul>
-      {dishes.map((dish) => (
-        <li style={{ listStyleType: "none"}}>{dish}</li>
-      ))}
+      {dishes.map((dish,i) => (
+       //  <li style={{ listStyleType: "none"}}>{dish}</li>  in this method we got key warning in the browser consol
+       <li key= {i} style={{ listStyleType: "none"}}>{dish}</li> 
+      ))} 
     </ul>
   )
 }
